@@ -1,0 +1,38 @@
+{
+  "name": "chromedriver-runner",
+  "version": "1.0.0",
+  "description": "Ensures chromedriver is running on a particular port.  Does not manage the chromedriver binary.",
+  "author": "Good Eggs <open-source@goodeggs.com>",
+  "contributors": [
+    "Bob <bob@zoller.us>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "chrome chromedriver webdriver wd selenium"
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/goodeggs/chromedriver-runner.git"
+  },
+  "homepage": "https://github.com/goodeggs/chromedriver-runner",
+  "bugs": "https://github.com/goodeggs/chromedriver-runner/issues",
+  "dependencies": {
+    "async": "^0.9.0",
+    "request": "^2.51.0"
+  },
+  "devDependencies": {
+    "coffee-script": ">=1.7.x",
+    "mocha": "~1.x.x",
+    "chai": "^1.10.0",
+    "sinon": "^1.12.2",
+    "sinon-chai": "^2.6.0",
+    "nock": "^0.52.1"
+  },
+  "scripts": {
+    "compile": "coffee --bare --compile --output lib/ src/",
+    "prepublish": "npm run compile",
+    "pretest": "npm run compile",
+    "test": "mocha"
+  }
+}
