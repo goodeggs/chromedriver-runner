@@ -13,7 +13,12 @@ npm install chromedriver-runner
 ```
 
 ```javascript
-var chromedriverRunner = require('chromedriver-runner');
+const ChromedriverRunner = require('chromedriver-runner');
+const chromedriverRunner = ChromedriverRunner.create({port: 9515});
+chromedriverRunner.start(function(err) {
+  if (err) throw err;
+  // your code goes here
+});
 ```
 
 ## Contributing
